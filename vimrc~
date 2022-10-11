@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+set clipboard=exclude:.*
+>>>>>>> 1eadd48 (remove zip and add leaderf)
 set nocompatible
 " 设置历史记录步数
 set history=10000
@@ -15,7 +19,10 @@ syntax enable
 " 设置字体
 set guifont=dejaVu\ Sans\ MONO\ 10
 " 设置配色
+<<<<<<< HEAD
 colorscheme desert
+=======
+>>>>>>> 1eadd48 (remove zip and add leaderf)
 """""""""""""""""""""""""""""""""
 " => 代码折叠功能
 """""""""""""""""""""""""""""""""
@@ -137,5 +144,18 @@ noremap <F3> :TagbarToggle<CR>
 noremap <F4> :vertical terminal<CR>
 noremap <F10> :ALEFix<CR>
 
+<<<<<<< HEAD
 
 let g:c_clangformat_use_local_file = '/home/codekali/.clang-format'
+=======
+let g:ale_c_clangformat_options = '-style="{BasedOnStyle: google, IndentWidth: 4, AccessModifierOffset: -3, AlignAfterOpenBracket: AlwaysBreak}"'
+
+
+let g:completor_filetype_map = {}
+" Enable lsp for go by using gopls
+let g:completor_filetype_map.go = {'ft': 'lsp', 'cmd': 'gopls'}
+" Enable lsp for rust by using rls
+let g:completor_filetype_map.rust = {'ft': 'lsp', 'cmd': 'rls'}
+" Enable lsp for c by using clangd
+let g:completor_filetype_map.c = {'ft': 'lsp', 'cmd': 'clangd-7'}
+>>>>>>> 1eadd48 (remove zip and add leaderf)

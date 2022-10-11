@@ -1,3 +1,4 @@
+set clipboard=exclude:.*
 set nocompatible
 " 设置历史记录步数
 set history=10000
@@ -12,10 +13,10 @@ set autoread
 """""""""""""""""""""""""""""""""
 " 开启语法
 syntax enable
+colorscheme desert
 " 设置字体
 set guifont=dejaVu\ Sans\ MONO\ 10
 " 设置配色
-colorscheme desert
 """""""""""""""""""""""""""""""""
 " => 代码折叠功能
 """""""""""""""""""""""""""""""""
@@ -182,3 +183,11 @@ if !isdirectory(s:vim_tags)
    silent! call mkdir(s:vim_tags, 'p')
 endif
 
+
+let g:completor_filetype_map = {}
+" Enable lsp for go by using gopls
+let g:completor_filetype_map.go = {'ft': 'lsp', 'cmd': 'gopls'}
+" Enable lsp for rust by using rls
+let g:completor_filetype_map.rust = {'ft': 'lsp', 'cmd': 'rls'}
+" Enable lsp for c by using clangd
+let g:completor_filetype_map.c = {'ft': 'lsp', 'cmd': 'clangd-7'}
